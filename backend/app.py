@@ -12,7 +12,9 @@ import jwt
 load_dotenv()
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": os.getenv("CORS_ORIGINS", "*")}})
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://KHUSHEE1317:Patil1317@cluster0.4pehn9v.mongodb.net/")
+MONGO_URI = os.getenv("MONGO_URI")
+if not MONGO_URI:
+    raise RuntimeError("MONGO_URI environment variable is missing")
 print("MONGO_URI configured:", bool(os.getenv("MONGO_URI")))
 print("Using Atlas:", (os.getenv("MONGO_URI") or "").startswith("mongodb+srv://"))
 DB_NAME = os.getenv("MONGO_DB", "personal_finance_tracker")
