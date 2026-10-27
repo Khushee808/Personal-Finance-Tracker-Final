@@ -74,3 +74,5 @@ npm run dev
 - The recurring field labels a transaction as recurring; it does not automatically create future transactions or send scheduled notifications yet.
 - Admin statistics are aggregated; the admin UI does not expose users' individual transaction lists. Only trusted admins should be provisioned.
 - For public hosting, configure strong environment variables, a restricted CORS origin, HTTPS, and MongoDB Atlas network access. Never use development secrets in production.
+# Personal-Finance-Tracker-Final
+Personal Finance Tracker Project
