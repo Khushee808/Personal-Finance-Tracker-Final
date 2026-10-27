@@ -1,0 +1,23 @@
+FINPILOT — ADVANCED PERSONAL FINANCE TRACKER
+
+Open the extracted folder in Visual Studio Code.
+
+1) Backend terminal:
+   cd backend
+   py -m venv .venv
+   .venv\Scripts\python.exe -m pip install -r requirements.txt
+   copy .env.example .env
+   Edit backend/.env and set MONGO_URI and JWT_SECRET.
+   Set ADMIN_EMAIL and ADMIN_PASSWORD (12+ characters).
+   .venv\Scripts\python.exe create_admin.py
+   .venv\Scripts\python.exe app.py
+
+2) Frontend terminal (open a second terminal):
+   cd frontend
+   npm install
+   npm run dev
+
+3) Open the localhost URL printed by Vite (usually http://localhost:5173).
+
+Requirements: Python 3.10+, Node.js LTS/npm, and local MongoDB running or MongoDB Atlas.
+For security, never share or upload backend/.env.
